@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="io.github.cjayasa.downloadmgr.HelloController">
+<VBox alignment="CENTER" prefHeight="343.0" prefWidth="387.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="io.github.cjayasa.downloadmgr.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <MFXTextField fx:id="fileUrl" prefHeight="13.0" prefWidth="84.0" text="Test" />
+    <MFXButton onAction="#onPasteButtonClick" text="Paste" />
+   <Label fx:id="progressLabel" alignment="CENTER" text="Label">
+      <font>
+         <Font size="22.0" />
+      </font>
+   </Label>
+   <ProgressBar fx:id="downloadProgress" prefHeight="28.0" prefWidth="300.0" progress="0.5" />
+    <Label fx:id="welcomeText" />
+    <MFXButton buttonType="RAISED" onAction="#onDownloadButtonClick" text="Download!" />
 </VBox>
